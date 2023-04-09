@@ -26,5 +26,8 @@ bool isFull(const vector *v);
 int getVectorValue(const vector *v, const size_t i);
 void pushBack(vector *v, const int x);
 void popBack(vector *v);
+int *atVector(const vector *v, const size_t index);
+int *back(const vector *v);
+int *front(const vector *v);
 
 #endif //LAB14_VECTOR_H

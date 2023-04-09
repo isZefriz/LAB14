@@ -68,3 +68,26 @@ void popBack(vector *v){
     }
 
 }
+
+int *atVector(const vector *v, const size_t index) {
+    if (index < 0 || index >= v->size || isEmpty(v)) {
+        fprintf(stderr, "Error: a[%zu] is not exists", index);
+        exit(1);
+    }
+    return v->data + index;
+}
+
+int *back(const vector *v) {
+    if (isEmpty(v)) {
+        fprintf(stderr, "Error: vector is empty");
+        exit(1);
+    }
+    return &(v->data[v->size - 1]);
+}
+int *front(const vector *v) {
+    if (isEmpty(v)) {
+        fprintf(stderr, "Error: vector is empty");
+        exit(1);
+    }
+    return &(v->data[0]);
+}
