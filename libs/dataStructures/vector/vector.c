@@ -84,6 +84,7 @@ int *back(const vector *v) {
     }
     return &(v->data[v->size - 1]);
 }
+
 int *front(const vector *v) {
     if (isEmpty(v)) {
         fprintf(stderr, "Error: vector is empty");

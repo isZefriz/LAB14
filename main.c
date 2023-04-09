@@ -38,6 +38,7 @@ void test_atVector_notEmptyVector() {
     v.data[2] = 3;
     assert(*atVector(&v, 1) == 2);
 }
+
 void test_atVector_requestToLastElement() {
     vector v = createVector(5);
     v.size = 5;
@@ -48,12 +49,14 @@ void test_atVector_requestToLastElement() {
     v.data[4] = 5;
     assert(*atVector(&v, v.size - 1) == 5);
 }
+
 void test_back_oneElementInVector() {
     vector v = createVector(1);
     v.size = 1;
     v.data[0] = 1;
     assert(*back(&v) == 1);
 }
+
 void test_front_oneElementInVector() {
     vector v = createVector(1);
     v.size = 1;
